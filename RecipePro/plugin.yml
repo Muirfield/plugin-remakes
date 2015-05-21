@@ -1,0 +1,19 @@
+main: RecipePro\Main
+api: 1.10.0
+load: POSTWORLD
+
+name: RecipePro
+description: Gives crafting recipe and item id of an item
+version: 2.0
+author: [aliuly,Glitchmaster_PE]
+
+commands:
+  recipe:
+    description: Tells what you need to craft something
+    usage: "/recipe <item>"
+    permission: recipepro.cmd.recipe
+
+permissions:
+  recipepro.cmd.recipe:
+    default: true
+    description: "Craft"
