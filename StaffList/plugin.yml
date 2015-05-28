@@ -1,0 +1,26 @@
+main: StaffList\Main
+api: 1.10.0
+load: POSTWORLD
+
+name: StaffList
+description: Give list of Staff
+version: 3.0
+author: [aliuly,Glitchmaster_PE]
+
+commands:
+  stafflist:
+    description: Give list of staff
+    usage: "/stafflist"
+    permission: stafflist.list
+  staffadd:
+    description: Add a staff member
+    usage: "/staffadd <o|a|m|t> <full username>"
+    permission: stafflist.add
+
+permissions:
+  stafflist.list:
+    default: true
+    description: "Allow listing staff"
+  stafflist.add:
+    default: true
+    description: "Allow modify staff list"
