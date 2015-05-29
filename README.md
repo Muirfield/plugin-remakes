@@ -53,7 +53,7 @@ Converted plugins
     Give list of staff
     <ul>
       <li>
-	<a href="https://github.com/alejandroliu/plugin-remakes/releases/tag/StaffList-3.0" title="Downloads">2.0
+	<a href="https://github.com/alejandroliu/plugin-remakes/releases/tag/StaffList-3.0" title="Downloads">3.0
 	  <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/download-icon.png" alt="Downloads"/></a>
       </li>
     </ul>
