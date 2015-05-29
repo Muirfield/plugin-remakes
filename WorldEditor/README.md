@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/alejandroliu/bad-plugins/master/Media/WorldEditor-icon.png" style="width:64px;height:64px" width="64" height="64"/>
+<img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/WorldEditor-icon.png" style="width:64px;height:64px" width="64" height="64"/>
 
 # WorldEditor *for PocketMine-MP (1.4)*
 
