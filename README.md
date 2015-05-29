@@ -43,5 +43,43 @@ Converted plugins
 </tr>
 
 <!---------------------------------------------------------------------->
+<tr>
+  <th>
+    <a href="https://github.com/alejandroliu/plugin-remakes/tree/master/StaffList/">
+      StaffList
+    </a>
+  </th>
+  <td>
+    Give list of staff
+    <ul>
+      <li>
+	<a href="https://github.com/alejandroliu/plugin-remakes/releases/tag/StaffList-3.0" title="Downloads">2.0
+	  <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/download-icon.png" alt="Downloads"/></a>
+      </li>
+    </ul>
+  </td>
+</tr>
+
+
+<!---------------------------------------------------------------------->
+<tr>
+  <th>
+    <a href="https://github.com/alejandroliu/plugin-remakes/tree/master/FolderPluginLoader/">
+      <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/folder-icon.png" style="width:64px;height:64px" width="64" height="64"/>
+      <br/>
+      FolderPluginLoader
+    </a>
+  </th>
+  <td>
+    Folder Plugin Loader de-coupled from DevTools
+    <ul>
+      <li>
+	<a href="https://github.com/alejandroliu/plugin-remakes/releases/tag/FolderPluginLoader-1.10.0" title="Downloads">v1.10.0
+	  <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/download-icon.png" alt="Downloads"/></a>
+      </li>
+    </ul>
+  </td>
+</tr>
+
 
 </table>

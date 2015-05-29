@@ -1,0 +1,8 @@
+name: FolderPluginLoader
+main: FolderPluginLoader\Main
+version: 1.10.0
+api: 1.3.1
+load: STARTUP
+author: PocketMine Team
+description: Load Folder PocketMine-MP plugins
+website: https://github.com/PocketMine/DevTools
