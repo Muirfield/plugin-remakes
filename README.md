@@ -80,6 +80,25 @@ Converted plugins
     </ul>
   </td>
 </tr>
+<!---------------------------------------------------------------------->
+<tr>
+  <th>
+    <a href="https://github.com/alejandroliu/plugin-remakes/tree/master/RunePvP">
+      <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/Iron_Sword.png" style="width:64px;height:64px" width="64" height="64"/>
+      <br/>
+      RunePvP
+    </a>
+  </th>
+  <td>
+    A funny PvP manager plugin inspired by RuinPvP
+    <ul>
+      <li>
+	<a href="https://github.com/alejandroliu/bad-plugins/releases/tag/RunePvP-1.1rel" title="Downloads">v1.1rel 
+	  <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/download-icon.png" alt="Downloads"/></a>
+      </li>
+    </ul>
+  </td>
+</tr>
 
 
 </table>
