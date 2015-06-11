@@ -102,7 +102,7 @@ Converted plugins
 <!---------------------------------------------------------------------->
 <tr>
   <th>
-    <a href="https://github.com/alejandroliu/plugin-remakes/tree/master/YouChat>
+    <a href="https://github.com/alejandroliu/plugin-remakes/tree/master/YouChat">
       <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/Chat-icon.png" style="width:64px;height:64px" width="64" height="64"/>
       <br/>
       YouChat
