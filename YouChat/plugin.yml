@@ -1,0 +1,70 @@
+main: aliuly\youchat\Main
+api: 1.12.0
+load: POSTWORLD
+
+name: YouChat
+description: "Chat Management: Nicknames, prefixes, muting"
+version: 1.0.0
+author: aliuly
+
+
+commands:
+  setprefix:
+    description: "Change a player's prefix"
+    usage: "/setprefix <text>"
+    permission: youchat.cmd.prefix
+  defprefix:
+    description: Set default prefix
+    usage: "/defprefix <text>"
+    permission: youchat.cmd.op.defprefix
+  delprefix:
+    description: "Remove player's prefix, setting it to default"
+    usage: "/delprefix"
+    permission: youchat.cmd.prefix
+  setnick:
+    description: "Set the player's nickname"
+    usage: "/setnick <nick>"
+    permission: youchat.cmd.nick
+  delnick:
+    description: "Remove player's nickname"
+    usage: "/delnick"
+    permission: youchat.cmd.nick
+  mute:
+    description: Mute player
+    usage: "/mute <player>"
+    permission: youchat.cmd.op.mute
+  unmute:
+    description: Un-Mute player
+    usage: "/unmute <player>"
+    permission: youchat.cmd.op.mute
+  yce:
+    description: Enable chat
+    usage: "/yce"
+    permission: youchat.cmd.op.ycx
+  ycd:
+    description: Disable chat
+    usage: "/ycd"
+    permission: youchat.cmd.op.ycx
+
+permissions:
+  youchat.cmd.prefix:
+    default: true
+    description: "allow players to change their prefix"
+  youchat.cmd.op.prefix:
+    default: op
+    description: "allow players to change others prefix"
+  youchat.cmd.nick:
+    default: true
+    description: "allow players to change their nickname"
+  youchat.cmd.op.nick:
+    default: true
+    description: "allow players to change others nickname"
+  youchat.cmd.op.defprefix:
+    default: op
+    description: "Define default prefix"
+  youchat.cmd.op.mute:
+    default: op
+    description: Allow to mute/unmute players
+  youchat.comd.op.ycx:
+    default: op
+    description: Allowed to enable/disable chat
