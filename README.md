@@ -28,7 +28,7 @@ Converted plugins
 <tr>
   <th>
     <a href="https://github.com/alejandroliu/plugin-remakes/tree/master/RecipePro">
-      RecipePro
+      <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/resource_icon.png" style="width:64px;height:64px" width="64" height="64"/>      RecipePro
     </a>
   </th>
   <td>
@@ -46,6 +46,7 @@ Converted plugins
 <tr>
   <th>
     <a href="https://github.com/alejandroliu/plugin-remakes/tree/master/StaffList/">
+      <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/resource_icon.png" style="width:64px;height:64px" width="64" height="64"/>
       StaffList
     </a>
   </th>
