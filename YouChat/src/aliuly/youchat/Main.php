@@ -30,6 +30,7 @@ class Main extends PluginBase implements CommandExecutor,Listener {
 			"prefix" => null,
 			"nick" => null,
 			"mute" => false,
+			"pause" => false,
 		];
 		$this->players[$n] = (new Config($path,Config::YAML,$defaults))->getAll();
 	}
@@ -99,7 +100,23 @@ class Main extends PluginBase implements CommandExecutor,Listener {
 				$player->sendMessage(TextFormat::RED."[YouChat] You have been muted from chat!");
 				return;
 			}
+			if ($this->players[$n]["pause"]) {
+				$ev->setCancelled();
+				$player->sendMessage(TextFormat::RED."[YouChat] You have paused chat!");
+				return;
+			}
 		}
+
+		$recvr = [];
+		foreach ($ev->getRecipients() as $to) {
+			$m = strtolower($to->getName());
+			if (isset($this->players[$m])) {
+				if ($this->players[$m]["pause"]) continue;
+			}
+			$recvr[] = $to;
+		}
+		$ev->setRecipients($recvr);
+
 		$vars = [
 			"{YouChat}" => $this->getDescription()->getFullName(),
 			"{player}" => $player->getName(),
@@ -170,7 +187,14 @@ class Main extends PluginBase implements CommandExecutor,Listener {
 		echo __METHOD__.",".__LINE__."\n";//##DEBUG
 		return $target;
 	}
+	private function chgUsrCfg($target,$setting,$value) {
+		$this->load($target); // Make sure defautls are there
+		$n = trim(strtolower($target->getName()));
+		$this->players[$n][$setting] = $value;
+		$this->save($target);
+		return true;
 
+	}
 	private function checkOther($sender,$setting,$args,$perm,$null=false) {
 		if (count($args) == 0
 			 || ($target = $this->findPlayer($args[0])) === null) {
@@ -198,10 +222,7 @@ class Main extends PluginBase implements CommandExecutor,Listener {
 			if (count($args) == 0) return false;
 			$value = implode(" ",$args);
 		}
-		$this->load($target); // Make sure defautls are there
-		$n = trim(strtolower($target->getName()));
-		$this->players[$n][$setting] = $value;
-		$this->save($target);
+		$this->chgUsrCfg($target,$setting,$value);
 		if ($target->isOnline()) {
 			if ($value === null) {
 				$target->sendMessage(TextFormat::AQUA.
@@ -256,6 +277,26 @@ class Main extends PluginBase implements CommandExecutor,Listener {
 				if (count($args) != 1) return false;
 				$this->mute($sender,implode(" ",$args),false);
 				return true;
+			case "ycstop":
+				if (!($sender instanceof Player)) {
+					$sender->sendMessage(TextFormat::YELLOW.
+												"[YouChat] In-game only command");
+					return true;
+				}
+				if (count($args) != 0) return false;
+				$this->chgUsrCfg($sender,"pause",true);
+				$sender->sendMessage(TextFormat::RED."[YouChat] Chat suspended");
+				return true;
+			case "ycstart":
+				if (!($sender instanceof Player)) {
+					$sender->sendMessage(TextFormat::YELLOW.
+												"[YouChat] In-game only command");
+					return true;
+				}
+				if (count($args) != 0) return false;
+				$this->chgUsrCfg($sender,"pause",false);
+				$sender->sendMessage(TextFormat::GREEN."[YouChat] Chat resumed");
+				return true;
 			case "yce":		// enable chat
 				$this->chgCfg("chat",true);
 				$this->getServer()->broadcastMessage(TextFormat::GREEN."[YouChat] Chat is now enabled");
@@ -263,6 +304,15 @@ class Main extends PluginBase implements CommandExecutor,Listener {
 			case "ycd":		// disable chat
 				$this->chgCfg("chat",false);
 				$this->getServer()->broadcastMessage(TextFormat::RED."[YouChat] Chat is now disabled");
+				return true;
+			case "clearchat": // Clear chat window
+				if (!($sender instanceof Player)) {
+					$sender->sendMessage(TextFormat::YELLOW.
+												"[YouChat] In-game only command");
+					return true;
+				}
+				if (count($args) != 0) return false;
+				for($i=0;$i<32;++$i) $sender->sendMessage(" ");
 				return true;
 		}
 		return false;

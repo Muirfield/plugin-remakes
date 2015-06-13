@@ -80,6 +80,8 @@ settings:
 
 # Changes
 
+* 1.0.2:
+  * New command: clearchat, ycstart, ycstop
 * 1.0.0 : First version
 
 # Copyright

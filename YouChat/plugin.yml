@@ -4,7 +4,7 @@ load: POSTWORLD
 
 name: YouChat
 description: "Chat Management: Nicknames, prefixes, muting"
-version: 1.0.0
+version: 1.0.1
 author: aliuly
 
 
@@ -45,8 +45,23 @@ commands:
     description: Disable chat
     usage: "/ycd"
     permission: youchat.cmd.op.ycx
+  ycstop:
+    description: Stop recieving chat messages
+    usage: "/ycstop"
+    permission: youchat.cmd.ycpause
+  ycstart:
+    description: Start recieving chat messages
+    usage: "/ycstart"
+    permission: youchat.cmd.ycpause
+  clearchat:
+    description: Clear your chat screen
+    usage: "/clearchat"
+    permission: youchat.cmd.clear
 
 permissions:
+  youchat.cmd.clear:
+    default: true
+    description: "Allow clearing your chat window"
   youchat.cmd.prefix:
     default: true
     description: "allow players to change their prefix"
@@ -68,3 +83,6 @@ permissions:
   youchat.comd.op.ycx:
     default: op
     description: Allowed to enable/disable chat
+  youchat.comd.op.ycpause:
+    default: true
+    description: Allowed to pause receiving chats
