@@ -39,7 +39,9 @@ Basic Commands:
 * /unmute [player] - unmute player from chat
 * /ycd - disable chat for all players
 * /yce - enable chat for all players
-
+* /clearchat - clear your chat window
+* /ycstop - stop's chat for you
+* /ycstart - re-start's chat for you
 
 ### Configuration
 
@@ -80,7 +82,7 @@ settings:
 
 # Changes
 
-* 1.0.2:
+* 1.0.1: Minor improvements
   * New command: clearchat, ycstart, ycstop
 * 1.0.0 : First version
 
