@@ -116,6 +116,10 @@ Converted plugins
     Chat Management: Nicknames, prefixes, muting
     <ul>
       <li>
+	<a href="https://github.com/alejandroliu/plugin-remakes/releases/tag/YouChat-1.0.1" title="Downloads">v1.0.1
+	  <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/download-icon.png" alt="Downloads"/></a>
+      </li>
+      <li>
 	<a href="https://github.com/alejandroliu/plugin-remakes/releases/tag/YouChat-1.0.0" title="Downloads">v1.0.0
 	  <img src="https://raw.githubusercontent.com/alejandroliu/plugin-remakes/master/Media/download-icon.png" alt="Downloads"/></a>
       </li>
